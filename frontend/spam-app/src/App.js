@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import EmailComposer from './EmailComposer/ComposerContainer/EmailComposer'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div class="header">
+        <h1>Spam Detection App</h1>
+        <p>Write an email in the email composer below and click send. See if the email is classified as spam or ham!</p>
+      </div>
+      <div class="compose-container">
+        <EmailComposer></EmailComposer>
+      </div>
     </div>
   );
 }
