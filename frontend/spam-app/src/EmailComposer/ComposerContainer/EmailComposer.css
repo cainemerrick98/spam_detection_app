@@ -35,6 +35,7 @@
 .email-composer textarea{
     resize: none;
     height: 100%;
+    width: 100%;
 }
 
 .email-composer button{
