@@ -1,4 +1,5 @@
 spamenv/
+backend/datasets
 
 # dependencies
 /frontend/spam-app/node_modules

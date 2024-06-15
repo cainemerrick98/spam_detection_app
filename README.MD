@@ -16,17 +16,16 @@ Currently a logistic regression model trained on the word count vectors provided
 
 **FastApi Backend**
 
-A simple backend that loads the transformers and the model from pckl files. There is one endpoint the /predict/ end point. This endpoint expects a json package that contain a content attribute. Within that attribute there should be another json object that maps a content attribute to a string
-
-e.g. 
-
-{
-    content: 'some string that represents the content of the email'
-
-    }
-
-If the incomming data is incorrectly structured then this will return a 422 error code for unprocessable entity. If the request is correctly structured the content is passed to the preprocess pipeline.
+A simple backend that loads the transformers and the model from pckl files. There is one endpoint the /predict/ end point. This endpoint expects a the request body to contain a content attribute and the value should be email body. This body is then transformed into a vector and a prediction is made using the fitted logisitic regression model
 
 **React Frontend**
 
-TBC
+A simple React front end with only two components: App and EmailComposer. The email composer contains the logic to send post requests to the API. If the api returns a classification of 1 then the email is spam, otherwise it is ham. The model prediction is indicated by the status tab in the top right of the image composer see below.
+
+**Blank App**
+
+![alt text](app.png)
+
+**Spam Email**
+
+![alt text](<images/spam example.png>)

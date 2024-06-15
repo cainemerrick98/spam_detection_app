@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from collections import Counter
 from string import punctuation
 from scipy.sparse import csr_matrix
-from modelling.custom_transformers import EmailToWordCounterTransformer, WordCounterToVectorTransformer
+from custom_transformers import EmailToWordCounterTransformer, WordCounterToVectorTransformer
 from numpy import ndarray
 import re
 
